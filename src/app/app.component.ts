@@ -3,13 +3,13 @@ import { CountdownConfig, CountdownEvent } from 'ngx-countdown';
 import { format, getDate } from 'date-fns';
 
 const CountdownTimeUnits: Array<[string, number]> = [
-  ['Y', 1000 * 60 * 60 * 24 * 365], // years
-  ['M', 1000 * 60 * 60 * 24 * 30], // months
-  ['D', 1000 * 60 * 60 * 24], // days
-  ['H', 1000 * 60 * 60], // hours
-  ['m', 1000 * 60], // minutes
-  ['s', 1000], // seconds
-  ['S', 1], // million seconds
+  ['Y', 1000 * 60 * 60 * 24 * 365],
+  ['M', 1000 * 60 * 60 * 24 * 30], 
+  ['D', 1000 * 60 * 60 * 24],
+  ['H', 1000 * 60 * 60], 
+  ['m', 1000 * 60], 
+  ['s', 1000], 
+  ['S', 1], 
 ];
 
 @Component({
@@ -38,7 +38,7 @@ export class AppComponent {
 
   calculateTimeDifference() {
     const currentDate = new Date();
-    const targetDate = new Date('2024-01-17T00:00:00');
+    const targetDate = new Date('2024-01-16T00:00:00');
 
     const differenceInSeconds = Math.floor((targetDate.getTime() - currentDate.getTime()) / 1000);
     return differenceInSeconds;
