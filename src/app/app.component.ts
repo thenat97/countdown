@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { CountdownConfig, CountdownEvent } from 'ngx-countdown';
-import { format, getDate } from 'date-fns';
 
 const CountdownTimeUnits: Array<[string, number]> = [
   ['Y', 1000 * 60 * 60 * 24 * 365],
@@ -18,7 +17,7 @@ const CountdownTimeUnits: Array<[string, number]> = [
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-
+  displayText:string = "Cada día que pasa, te quiero más, cada día, falta menos, te quiero mucho mi reina."
   config:CountdownConfig = {
     leftTime: this.calculateTimeDifference(),
     formatDate: ({ date, formatStr }) => {
@@ -32,6 +31,7 @@ export class AppComponent {
             return v.toString().padStart(match.length, '0');
           });
         }
+       this.calculateTimeDifference()
         return current;
       }, "D:H:m:s");
     }};
@@ -41,13 +41,11 @@ export class AppComponent {
     const targetDate = new Date('2024-01-16T00:00:00');
 
     const differenceInSeconds = Math.floor((targetDate.getTime() - currentDate.getTime()) / 1000);
+  
+    if (differenceInSeconds <= 0) {
+      this.displayText = "El gran día ha llegado, y no podría estar más feliz, después de un gran tiempo de espera lo hemos logrado, estoy  extremadamente feliz y emocionado, te quiero muchote mi reina hermosa, nos vemos muy muy muy pronto mi amor, eres la mejor, la más hermosa, mi lady, mi vida, mi reina. "
+    }
     return differenceInSeconds;
   }
-
-  handleEvent(e: CountdownEvent) {
-    console.log('Actions', e);
-  }
-
-
 
 }
