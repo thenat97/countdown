@@ -17,7 +17,7 @@ const CountdownTimeUnits: Array<[string, number]> = [
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  displayText:string = "Te amo mi reina, eres hermosa, eres divina, eres perfecta, la mejor novia, contigo me veo una vida, pero por ahora contare hasta vernos de nuevo."
+  displayText:string = "Solo unas horas más para el gran día amor, por lo general soy paciente, pero en estos momentos solo puedo pensar en ti y lo poco que falta, ya te quiero ver amor, solo un poquito más."
   config:CountdownConfig = {
     leftTime: this.calculateTimeDifference(),
     formatDate: ({ date, formatStr }) => {
@@ -43,7 +43,7 @@ export class AppComponent {
     const differenceInSeconds = Math.floor((targetDate.getTime() - currentDate.getTime()) / 1000);
   
     if (differenceInSeconds <= 0) {
-      this.displayText = "El gran día ha llegado, y no podría estar más feliz, después de un gran tiempo de espera lo hemos logrado, estoy  extremadamente feliz y emocionado, te quiero muchote mi reina hermosa, nos vemos muy muy muy pronto mi amor, eres la mejor, la más hermosa, mi lady, mi vida, mi reina. "
+      this.displayText = "Una vez más ha llegado el gran día mi amor, solo un ratito más y nos veremos de nuevo, estaremos pegados como chicles, te amo muchote mi reina hermosa, pronto podre decirte, bienvenida a tu hogar. "
     }
     return differenceInSeconds;
   }
