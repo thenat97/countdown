@@ -17,7 +17,7 @@ const CountdownTimeUnits: Array<[string, number]> = [
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  displayText:string = "Solo unas horas más para el gran día amor, por lo general soy paciente, pero en estos momentos solo puedo pensar en ti y lo poco que falta, ya te quiero ver amor, solo un poquito más."
+  displayText:string = "Ya casi llega el día amor, solo un poquito más para estar abrazados y pegados como chicles, para estar juntos, para poder cuidarte y acompañarte, no volverás a estar solita mi amor, solo un poco más mi reina hermosa."
   config:CountdownConfig = {
     leftTime: this.calculateTimeDifference(),
     formatDate: ({ date, formatStr }) => {
@@ -38,7 +38,7 @@ export class AppComponent {
 
   calculateTimeDifference() {
     const currentDate = new Date();
-    const targetDate = new Date('2024-03-23T00:00:00');
+    const targetDate = new Date('2024-06-15T00:00:00');
 
     const differenceInSeconds = Math.floor((targetDate.getTime() - currentDate.getTime()) / 1000);
   
