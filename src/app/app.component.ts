@@ -43,7 +43,7 @@ export class AppComponent {
     const differenceInSeconds = Math.floor((targetDate.getTime() - currentDate.getTime()) / 1000);
   
     if (differenceInSeconds <= 0) {
-      this.displayText = "Una vez más ha llegado el gran día mi amor, solo un ratito más y nos veremos de nuevo, estaremos pegados como chicles, te amo muchote mi reina hermosa, pronto podre decirte, bienvenida a tu hogar. "
+      this.displayText = "Hemos pasado por mucho amor, pero el dia por fin llego, solo un poco mas mi reina hermosa, te veo dentro de poco amor mio, bienvenida a tu hogar amor "
     }
     return differenceInSeconds;
   }
